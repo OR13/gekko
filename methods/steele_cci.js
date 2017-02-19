@@ -122,7 +122,6 @@ method.check = function () {
     } else {
         this.advice();
     }
-    //  27435.69580 USDT
 }
 
 module.exports = method;
