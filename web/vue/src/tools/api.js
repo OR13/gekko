@@ -1,7 +1,9 @@
 // global window.CONFIG
 
 const config = window.CONFIG.api;
-const host = `${config.host}:${config.port}${config.path}api/`;
+var host = `${config.host}:${config.port}${config.path}api/`;
+
+var host = 'gekko.or13.io/api/';
 
 // rest API path
 if(config.ssl) {
