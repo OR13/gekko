@@ -1,0 +1,10 @@
+authtoken: TOKEN
+json_resolver_url: ""
+dns_resolver_ips: []
+tunnels:
+  gekko:
+    addr: 3000
+    proto: http
+    hostname: DEMO.EXAMPLE.COM
+    auth: "USER:PASS"
+    inspect: false

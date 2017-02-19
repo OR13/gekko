@@ -4,8 +4,9 @@
 const CONFIG = {
   api: {
     ssl: false,
-    host: 'localhost',
-    port: 3000,
+    // host: 'localhost',
+    host: 'gekko.or13.io',
+    port: 80,
     path: '/'
   }
 }
