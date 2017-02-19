@@ -4,7 +4,7 @@ const config = window.CONFIG.api;
 const host = `${config.host}:${config.port}${config.path}api/`;
 
 // override for remote hosting...
-host = window.location.hostname + "/api/";
+host = "gekko.or13.io/api/";
 
 // rest API path
 if(config.ssl) {
