@@ -105,7 +105,7 @@ method.cci_check = function (self) {
     } else {
         self.cci_advice = undefined;
     }
-    log.debug("Trend: ", self.cci_trend.direction, " for ", self.cci_trend.duration);
+    // log.debug("Trend: ", self.cci_trend.direction, " for ", self.cci_trend.duration);
 }
 
 // combine them here...

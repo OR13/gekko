@@ -46,7 +46,7 @@ method.uo_check = function (self) {
                 adviced: false
             };
         self.uo_trend.duration++;
-        log.debug('In high since', self.uo_trend.duration, 'candle(s)');
+        // log.debug('In high since', self.uo_trend.duration, 'candle(s)');
         if (self.uo_trend.duration >= uo_settings.thresholds.persistence)
             self.uo_trend.persisted = true;
         if (self.uo_trend.persisted && !self.uo_trend.adviced) {
@@ -64,7 +64,7 @@ method.uo_check = function (self) {
                 adviced: false
             };
         self.uo_trend.duration++;
-        log.debug('In low since', self.uo_trend.duration, 'candle(s)');
+        // log.debug('In low since', self.uo_trend.duration, 'candle(s)');
         if (self.uo_trend.duration >= uo_settings.thresholds.persistence)
             self.uo_trend.persisted = true;
 
@@ -74,7 +74,7 @@ method.uo_check = function (self) {
         } else
             self.uo_advice = undefined;
     } else {
-        log.debug('In no trend');
+        // log.debug('In no trend');
         self.uo_advice = undefined;
     }
 }

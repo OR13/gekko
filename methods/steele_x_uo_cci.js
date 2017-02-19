@@ -22,22 +22,49 @@ method.init = function () {
     method.cci_init(this);
 }
 method.log = function () {
-    method.uo_log(this);
-    method.cci_log(this);
+    // method.uo_log(this);
+    // method.cci_log(this);
 };
+
+// this method takes advice weights and reduces to a single advice string.
+method.advice_reducer = function (advice_weights) {
+    // weights should sum to 1
+
+    var naive_majority = [];
+
+    var advice = {
+        "short": 0,
+        "long": 0,
+        "undefined": 0
+    };
+
+    _.each(advice_weights, (indicator) => {
+        advice[indicator.advice] += indicator.weight;
+    });
+
+    // log.debug('weighted_advice: ', advice);
+    return Object.keys(advice).reduce((a, b) => { return advice[a] > advice[b] ? a : b });
+
+}
+
 method.check = function () {
 
     method.uo_check(this);
     method.cci_check(this);
 
-    var advice;
-
-    if (this.uo_advice === this.cci_advice && this.cci_advice !== undefined) {
-        this.advice(this.cci_advice);
-    } else {
-        this.advice();
+    var advice_weights = {
+        uo: {
+            advice: this.uo_advice,
+            weight: .75
+        },
+        cci: {
+            advice: this.cci_advice,
+            weight: .25
+        }
     }
-    
+    var advice = method.advice_reducer(advice_weights);
+    // log.debug('advice: ', advice)
+    this.advice(advice);
 }
 
 module.exports = method;
