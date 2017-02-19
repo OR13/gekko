@@ -10,15 +10,15 @@ var log = require('../core/log.js');
 // Let's create our own method
 var method = {};
 
-var steele_uo = require('./steele_uo');
-var steele_cci = require('./steele_cci');
-var steele_macd = require('./steele_macd');
-var steele_ppo = require('./steele_ppo');
+var or13_uo = require('./or13_uo');
+var or13_cci = require('./or13_cci');
+var or13_macd = require('./or13_macd');
+var or13_ppo = require('./or13_ppo');
 
-_.extend(method, steele_uo);
-_.extend(method, steele_cci);
-_.extend(method, steele_macd);
-_.extend(method, steele_ppo);
+_.extend(method, or13_uo);
+_.extend(method, or13_cci);
+_.extend(method, or13_macd);
+_.extend(method, or13_ppo);
 
 // combine them here...
 method.init = function () {

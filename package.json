@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "backtest": "node gekko --backtest",
+    "import": "node gekko --import",
     "test": "./node_modules/.bin/mocha test/*.js --recursive test -u tdd --reporter spec"
   },
   "author": "Mike van Rossum <mike@mvr.me>",
