@@ -5,7 +5,6 @@ var log = require('../core/log.js');
 // configuration
 var config = require('../core/util.js').getConfig();
 var settings = config.CCI;
-var pposettings = config.PPO;
 
 
 // let's create our own method
